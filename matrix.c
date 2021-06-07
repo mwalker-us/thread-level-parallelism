@@ -17,7 +17,7 @@
  * enhanced multi-threaded algorithm. It prints out the time taken during the calculation part. The
  * thread must contain initialized timspec start and stop variables so that the time taken can be
  * determined.
- * 
+ *
  * @return true if both matrices are equal, false otherwise.
  */
 bool compare_both_matrices()
@@ -35,6 +35,7 @@ bool compare_both_matrices()
             }
         }
     }
+    printf("Successfully nade", 1, time);
     return true;
 }
 
@@ -44,7 +45,7 @@ bool compare_both_matrices()
  * enough information to get the row to start, the row to end on, as well as the ability
  * to store starting and ending times. Also note that the row to start on is inclusive
  * but the row to end on is exclusive.
- * 
+ *
  * @arg *compute_thread links to the thread that should be executed next.
  */
 void *enhanced_mult_matrix(void *compute_thread)
@@ -84,7 +85,7 @@ void initialize_matrices()
  * Initializes num_threads number of threads in order to run an enhanced matrix calculation algorithm.
  * Matrix A[1200][1000] and B[1000][500] must already be initialized but the thread_head and thread_tail
  * pointer should be NULL otherwise all data contained within those structs will be destroyed.
- * 
+ *
  * @return the time it took run the enhanced multi-threaded matrix algorithm.
  */
 double process_threads(int num_threads)
@@ -127,10 +128,10 @@ double process_threads(int num_threads)
 }
 
 /**
- * Takes a matrix array where the calculations should be stored; starting and ending row 
+ * Takes a matrix array where the calculations should be stored; starting and ending row
  * numbers. It assumes A[1200][1000] and B[1000][500] are already initialized. Furthermore
  * any information stored in the array from [row_start, row_end) will be cleared.
- * 
+ *
  * @code array - the array where the computed information is stored in.
  * @code row_start - the row in the matrix where the calculations are started from (inclusive).
  * @code row_end - the row in the matrix where the calculations are ended on (exclusive).
@@ -154,7 +155,7 @@ void multiply_matrix(int array[1200][500], int row_start, int row_end)
 /* *-**-**-**-**-**-**-**-**-**-* Main FUNCTION *-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-* */
 
 /**
- * Takes a number via the console to indicate how many threads should be created. It then creates that 
+ * Takes a number via the console to indicate how many threads should be created. It then creates that
  * many threads with the first thread calculating C fully on its own and the rest of the threads divvy
  * up the work of computing C_1. Both C and C_1 get run through the same algorithm except is done using
  * a multi-threaded workload in a bit to increase performance. By the method is finished, the to matrices

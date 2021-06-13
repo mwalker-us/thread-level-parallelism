@@ -5,7 +5,7 @@
 /*   2) Make exec_matrix   - Creates and executable named 'matrix_exec' which you can then run. */
 /*   3) Make clean  - Deletes executable files and object files from folder.                    */
 /*                                                                                              */
-/* @author Michael Walker (2159).                                                               */
+/* @author Michael Walker.                                                                      */
 /* ************************* END COMPILATION INSTRUCTIONS ***************************************/
 
 #include "matrix.h"
